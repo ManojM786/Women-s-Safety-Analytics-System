@@ -1,0 +1,74 @@
+🚀 Women Safety Analytics System - Algorithm 🚀
+📌 Objective
+This system processes a video to detect persons and cars, classify gender, recognize emotions, and detect potential SOS situations using advanced AI models.
+
+🛠 Step 1: Initialization
+🔹 Load YOLOv8 for detecting persons and cars.
+🔹 Load EfficientNet Gender Classifier (trained on PETA dataset).
+🔹 Load YOLO Face Detector (for emotion recognition only).
+🔹 Load DeepSORT for object tracking.
+🔹 Load Facial Emotion Recognition (FER) Model.
+🔹 Initialize EasyOCR for Automatic Number Plate Recognition (ANPR).
+🔹 Set up MediaPipe Pose & Hands for SOS gesture recognition.
+
+🎥 Step 2: Process Video Frame-by-Frame
+🔹 Read each frame from the input video.
+🔹 Run YOLOv8 to detect objects (persons & cars).
+🔹 Pass detected objects to DeepSORT to track them over time.
+
+🧑‍🤖 Step 3: Process Each Tracked Object
+👥 If the object is a person:
+✔️ Classify Gender (Man/Woman) using EfficientNet.
+✔️ Store track ID & gender to ensure consistency.
+✔️ Draw Bounding Boxes:
+
+🟦 Blue for Men
+🟩 Green for Women
+✔️ If the person is a woman:
+
+🎭 Detect face using YOLO (if visible).
+🎭 Classify facial emotion using FER.
+🚨 If emotion is Sad, Fear, Disgust, or Angry → Perform SOS detection.
+🚗 If the object is a car:
+✔️ Extract the bounding box.
+✔️ Run ANPR (Automatic Number Plate Recognition).
+✔️ Store detected license plate numbers.
+
+🚨 Step 4: SOS Gesture Recognition for Women
+📌 Performed only if emotion is negative.
+
+🔹 Extract body pose using MediaPipe Pose Estimation.
+🔹 Detect hand gestures using MediaPipe Hands (Raised Hand, Waving, etc.).
+🔹 Detect running or sudden movements.
+
+✔️ If at least 2 out of 3 conditions are met → Mark as "SOS Detected"
+✔️ Draw 🟥 Red bounding box & log the SOS event.
+
+👤 Step 5: Lone Woman Tracking
+🔹 Track women who are alone for 10+ seconds.
+🔹 If a woman remains alone beyond the threshold, flag her as Lone Woman.
+
+📄 Step 6: Generate Outputs
+📌 Processed Output Video with bounding boxes.
+📌 Report (report.txt) including:
+
+Total Men & Women detected
+Total SOS cases
+Total License plates identified
+Lone women tracking results
+📌 Car license plate data saved in (car_results.csv).
+
+🏁 Step 7: Final Processing & Cleanup
+🔹 Release video resources.
+🔹 Print “Detection Completed” message.
+
+💡 Key Features & Optimizations
+✅ Gender classification happens immediately after person detection (EfficientNet).
+✅ Face detection is used ONLY for emotion recognition (not gender classification).
+✅ DeepSORT ID consistency is improved (max_age=90) to prevent gender misclassification.
+
+🎯 Final Thoughts
+This AI-powered system ensures accurate gender classification, real-time emotion detection, and SOS recognition, making it an effective women’s safety analytics solution.
+
+🚀 Ready to Deploy & Protect! 🚀
+

@@ -1,0 +1,19 @@
+Video Analysis Report
+===================
+
+Analysis performed on: 2025-02-20 18:30:38
+Input video: /content/drive/MyDrive/carwomen.mp4
+Output video: car_women2_output.mp4
+
+Statistics:
+- Total frames processed: 733
+- Finally Total Men detected: 1
+- Finally Total Women detected: 4
+- Gender ratio (M/F): 1:4
+- Lone women detected (tracking IDs): 1
+- Total SOS instances detected: 113
+- Unique number plates: 0
+- Average plates per frame: 0.00
+
+Lone Women Detected (tracking IDs):
+- ID: 1

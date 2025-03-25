@@ -1,0 +1,19 @@
+Video Analysis Report
+===================
+
+Analysis performed on: 2025-02-20 18:37:09
+Input video: /content/safewomen.mp4
+Output video: safewomen_output.mp4
+
+Statistics:
+- Total frames processed: 240
+- Finally Total Men detected: 2
+- Finally Total Women detected: 1
+- Gender ratio (M/F): 2:1
+- Lone women detected (tracking IDs): 1
+- Total SOS instances detected: 0
+- Unique number plates: 0
+- Average plates per frame: 0.00
+
+Lone Women Detected (tracking IDs):
+- ID: 1

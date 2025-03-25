@@ -1,0 +1,12 @@
+numpy
+pandas
+torch
+torchvision
+torchsummary
+opencv-python
+ultralytics
+deep-sort-realtime
+easyocr
+Pillow
+tqdm
+mediapipe
