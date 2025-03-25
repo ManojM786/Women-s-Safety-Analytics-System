@@ -1,3 +1,5 @@
+📌 **Pinned File:** [Women.ipynb](Women.ipynb)
+
 # Women Safety Analytics System 🚀
 
 An AI-powered **video surveillance system** that processes real-time video to detect persons and vehicles, classify gender, recognize emotions, and detect potential **SOS situations** using advanced AI models.
