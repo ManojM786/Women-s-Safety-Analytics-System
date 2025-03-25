@@ -6,12 +6,6 @@ An AI-powered **video surveillance system** that processes real-time video to de
 
 ---
 
-## ⚠️ NOTE  
-This project is currently **under deployment** and will soon be **published as a journal paper**.  
-🚨 **Some of the code and datasets may not be available in this repository until the paper is published.** 🚨  
-
----
-
 
 
 ## 📌 Features
