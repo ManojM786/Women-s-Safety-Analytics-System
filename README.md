@@ -1,4 +1,3 @@
-📌 **Pinned File:** [Women.ipynb](Women.ipynb)
 
 # Women Safety Analytics System 🚀
 
